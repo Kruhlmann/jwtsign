@@ -1,7 +1,8 @@
-/Cargo.lock
-/target
-/jwtsign
-/build
 *.egg-info
-/dist
 *.whl
+/Cargo.lock
+/build
+/dist
+/jwtsign
+/target
+src/version.py
