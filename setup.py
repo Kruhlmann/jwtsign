@@ -3,7 +3,7 @@ from setuptools_rust import Binding, RustExtension
 
 setup(
     name="jwtsign",
-    version="1.0",
+    version="1.0.1",
     classifiers=[
         "Programming Language :: Python",
         "Programming Language :: Rust",
