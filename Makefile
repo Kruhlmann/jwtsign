@@ -1,6 +1,6 @@
 OUTDIR ?= target
 PYTHON := python3
-PY_VERSION_FILE := src/version.py
+PY_VERSION_FILE := python/jwtsign/version.py
 
 include make/build.mk
 include make/clean.mk

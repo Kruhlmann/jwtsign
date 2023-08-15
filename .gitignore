@@ -5,4 +5,4 @@
 /dist
 /jwtsign
 /target
-src/version.py
+python/jwtsign/version.py
