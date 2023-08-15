@@ -14,8 +14,5 @@ mkdir -p wheelhouse
 mv dist/*.whl wheelhouse/
 
 for whl in wheelhouse/*.whl; do
-    # auditwheel repair "$whl" --plat manylinux_2_28_x86_64 -w wheelhouse/
-    echo "Contents of $whl:"
-    unzip -l "$whl"
-    echo "----------------------"
+    auditwheel repair "$whl" --plat manylinux_2_28_x86_64 -w wheelhouse/
 done
