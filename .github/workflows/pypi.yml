@@ -18,7 +18,9 @@ jobs:
         with:
           python-version: "3.11"
       - name: Install Pip
-        run: python -m pip install --upgrade pip
+        run: |
+          python -m pip install --upgrade pip
+          curl https://sh.rustup.rs -sSf | sh -s -- -y --default-toolchain=stable
       - name: Make package
         run: make dist
       - name: Publish package

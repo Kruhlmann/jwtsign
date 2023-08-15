@@ -5,5 +5,5 @@ $(OUTDIR)/release/libjwtsign.so: $(RUST_SRC) Cargo.toml
 	$(CARGO) build --release
 
 dist:
-	@pip install wheel rust_setuptools
+	@pip install wheel setuptools-rust
 	$(PYTHON) setup.py sdist bdist_wheel
