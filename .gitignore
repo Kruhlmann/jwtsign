@@ -1,2 +1,7 @@
 /Cargo.lock
 /target
+/jwtsign
+/build
+*.egg-info
+/dist
+*.whl

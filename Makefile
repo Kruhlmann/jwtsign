@@ -1,5 +1,6 @@
 OUTDIR ?= target
 PYTHON := python3
+PY_VERSION := $(shell grep 'version=' setup.py | sed 's/.*version="\(.*\)".*/\1/')
 
 include make/build.mk
 include make/clean.mk
