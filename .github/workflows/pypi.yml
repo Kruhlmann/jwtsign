@@ -27,14 +27,13 @@ jobs:
           python -m pip install --upgrade pip
           curl https://sh.rustup.rs -sSf | sh -s -- -y --default-toolchain=stable
 
-      - name: Build wheels in Docker
-        run: |
-          docker run -v $(pwd):/io quay.io/pypa/manylinux_2_28_x86_64 /io/build-wheels.sh
-          mkdir -p dist
-          mv wheelhouse/*.whl dist/
-
       - name: Make package
         run: make dist
+
+      - name: Add manylinux wheels
+        run: |
+          docker run -v $(pwd):/io quay.io/pypa/manylinux_2_28_x86_64 /io/build-wheels.sh
+          mv wheelhouse/*.whl dist/
 
       - name: Publish package
         uses: pypa/gh-action-pypi-publish@27b31702a0e7fc50959f5ad993c78deac1bdfc29
