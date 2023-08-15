@@ -1,13 +1,19 @@
 [package]
 name = "jwtsign"
-version = "0.1.0"
+version = "1.0.0"
 edition = "2021"
+
+[lib]
+name = "jwtsign"
 crate-type = ["cdylib"]
+path = "src/lib.rs"
 
 [dependencies]
 jsonwebtoken = "8.3.0"
-openssl = "0.10.34"
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
-base64 = "0.21.2"
-ring = "0.16.20"
+pyo3 = { version = "0.15", features = ["extension-module"] }
+
+[dev-dependencies]
+cargo-tarpaulin = "0.22.0"
+rstest = "0.15.0"
