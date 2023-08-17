@@ -1,4 +1,4 @@
-use jsonwebtoken::{Validation, Algorithm, DecodingKey};
+use jsonwebtoken::{Algorithm, DecodingKey, Validation};
 use serde::de::DeserializeOwned;
 
 pub struct JwtDecoder {
@@ -7,10 +7,7 @@ pub struct JwtDecoder {
 }
 
 impl JwtDecoder {
-    pub fn new(
-        public_key: Vec<u8>,
-        leeway: u64,
-    ) -> Result<Self, jsonwebtoken::errors::Error> {
+    pub fn new(public_key: Vec<u8>, leeway: u64) -> Result<Self, jsonwebtoken::errors::Error> {
         let mut validator = Validation::new(Algorithm::RS256);
         validator.leeway = leeway;
         Ok(Self {

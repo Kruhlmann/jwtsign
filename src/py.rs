@@ -1,7 +1,7 @@
 use pyo3::prelude::*;
 use serde_json;
 
-use crate::jwt::{encoder::JwtEncoder, decoder::JwtDecoder};
+use crate::jwt::{decoder::JwtDecoder, encoder::JwtEncoder};
 
 #[pyclass]
 pub struct PyJwtEncoder {
