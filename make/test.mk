@@ -6,7 +6,9 @@ unit-test:
 	$(CARGO) test -- --nocapture
 
 .PHONY: integration-test
-integration-test: $(OUTDIR)/release/libjwtsign.so
+integration-test: ${PY_VERSION_FILE}
+	@pip install setuptools-rust
+	$(PYTHON) setup.py install
 	$(PYTHON) ./integration_tests/bindings.py
 
 .PHONY: tarpaulin-report.html

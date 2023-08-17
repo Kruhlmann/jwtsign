@@ -1,6 +1,6 @@
 OUTDIR ?= target
 PYTHON := python3
-PY_VERSION := $(shell grep 'version=' setup.py | sed 's/.*version="\(.*\)".*/\1/')
+PY_VERSION_FILE := python/jwtsign/version.py
 
 include make/build.mk
 include make/clean.mk
