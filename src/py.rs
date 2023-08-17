@@ -65,7 +65,7 @@ impl PyJwtDecoder {
 }
 
 #[pymodule]
-fn libjwtsign(_: Python, module: &PyModule) -> PyResult<()> {
+fn jwtsign(_: Python, module: &PyModule) -> PyResult<()> {
     module.add_class::<PyJwtEncoder>()?;
     module.add_class::<PyJwtDecoder>()?;
     Ok(())

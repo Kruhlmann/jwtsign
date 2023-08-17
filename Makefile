@@ -1,3 +1,4 @@
+.ONESHELL:
 OUTDIR ?= target
 PYTHON := python3
 PY_VERSION_FILE := python/jwtsign/version.py

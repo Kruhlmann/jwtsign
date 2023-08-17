@@ -6,8 +6,8 @@ unit-test:
 	$(CARGO) test -- --nocapture
 
 .PHONY: integration-test
-integration-test: ${PY_VERSION_FILE}
-	@pip install setuptools-rust
+integration-test: $(PY_VERSION_FILE) venv
+	. venv/bin/activate
 	$(PYTHON) setup.py install
 	$(PYTHON) ./integration_tests/bindings.py
 

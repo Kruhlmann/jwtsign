@@ -1,10 +1,6 @@
-import sys
-import os
 import json
 import time
-current_dir = os.getcwd()
-sys.path.append(os.path.join(current_dir, "target", "release"))
-from libjwtsign import PyJwtEncoder, PyJwtDecoder
+from jwtsign import PyJwtEncoder, PyJwtDecoder
 
 def read_bin(path: str) -> bytes:
     with open(path, "rb") as file:
