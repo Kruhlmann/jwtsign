@@ -44,7 +44,7 @@ claims = {
 }
 
 token_claims_obj = encoder.encode_claims_json_obj(claims)
-decoded_claims_obj = decoder.decode(token_claims_obj )
+decoded_claims_obj = decoder.decode(token_claims_obj)
 token_claims_str = encoder.encode_claims_json_str(json.dumps(claims))
 decoded_claims_str = decoder.decode(token_claims_str)
 
