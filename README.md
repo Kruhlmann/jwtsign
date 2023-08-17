@@ -5,11 +5,19 @@ Rust jwt signing bindings for python
 Usage:
 
 ```py
+import time
+import json
+
 from jwtsign import PyJwtEncoder, PyJwtDecoder
 
 def read_bin(path: str) -> bytes:
     with open(path, "rb") as file:
         return file.read()
+
+claims = {
+    "id": "example",
+    "exp": int(time.time() + 60),
+}
 
 private_key = read_bin("res/private_key.pem")
 public_key = read_bin("res/public_key.pem")
