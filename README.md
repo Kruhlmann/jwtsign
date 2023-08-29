@@ -36,4 +36,4 @@ decoded_claims_str = decoder.decode(token_claims_str)
 Decoder validates expiration time based on UTC with a leeway defined in the `PyJwtDecoder::__init__`.
 
 > [!NOTE]
-> If at any point you have your claim as serialized JSON keep in mind that this perform slightly faster than the object serialization, as the rust code uses python bindings to call `json.dumps` on the object.
+> If at any point you have your claim as serialized JSON keep in mind that this performs slightly faster than the object as encoding parameter, as the rust code uses python bindings to call `json.dumps` on the object.
